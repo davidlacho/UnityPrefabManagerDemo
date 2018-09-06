@@ -1,0 +1,1 @@
+This project demonstrates using a prefab manager to instantiate new prefabs in Unity scenes. This is to overcome the issue of instantiating a clone of an object that is already in the scene. This ensures that all scripts and variables on the prefab are loaded into the active scene. 
