@@ -9,6 +9,10 @@ public class PrefabManager : MonoBehaviour
 {
     // Assign the prefab in the inspector
     public GameObject cubePrefab;
+
+    // Position where to instantiate prefab
+    private Transform position;
+
     //Singleton
     private static PrefabManager m_Instance = null;
     public static PrefabManager Instance
@@ -25,6 +29,7 @@ public class PrefabManager : MonoBehaviour
 
     private void Start()
     {
-        Instantiate(PrefabManager.Instance.cubePrefab);
+        position = GameObject.Find("instantiateHere").transform;
+        Instantiate(PrefabManager.Instance.cubePrefab, position.position, Quaternion.identity);
     }
 }
